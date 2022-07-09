@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="QAF Demo" verbose="0" parallel="tests" thread-count="1">
+	<method-selectors>
+		<method-selector>
+			<selector-class name="com.qmetry.qaf.automation.testng.pro.QAFMethodSelector"/>
+		</method-selector>
+	</method-selectors>
+	<test name="Android Test Suite" enabled="true" >
+	<parameter name="driver.capabilities.noReset" value="true"/>
+	<parameter name="env.resources" value="resources/android/env.properties" />
+	<parameter name="env.resources" value="resources/data/" />
+	<parameter name="driver.capabilities.appPackage" value="com.sec.android.app.popupcalculator" />
+	<parameter name="driver.capabilities.appActivity" value="com.sec.android.app.popupcalculator.Calculator">
+
+	</parameter>
+	<parameter name="env.resources" value="resources/android/app.properties" />
+	<parameter name="platformName" value="Android" />
+	<parameter name="step.provider.pkg" value="steps" />
+	<parameter name="scenario.file.loc" value="scenarios/" />
+	<parameter name="driver.capabilities.udid" value="RZ8N8122DXY"  />
+
+	<groups>
+		<run>
+<!--			<exclude name="{'@launch','@launch'}" />-->
+			<include name="@launch" />
+		</run>
+	</groups>
+	<classes>
+
+		<class name="utility.test_run" />
+		<class name="com.qmetry.qaf.automation.step.client.gherkin.GherkinScenarioFactory" />
+	</classes>
+	</test>
+</suite>

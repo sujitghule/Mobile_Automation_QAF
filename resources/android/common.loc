@@ -1,0 +1,2 @@
+common.loc={"locator":"xpath=//*[contains(@text,'%s')]","desc":"common locator"}
+second.loc={"locator":"xpath=//*[contains(@text,'%s')]","desc":"common locator"}
