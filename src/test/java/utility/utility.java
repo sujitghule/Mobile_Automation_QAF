@@ -13,4 +13,8 @@ private QAFWebElement loc;
         ele.waitForVisible(60000);
         ele.click();
     }
+
+    public void scrollTillElementVisible(){
+    // put code here
+    }
 }
